@@ -1,10 +1,12 @@
 # 江山时序 · Chronicles of the Realm
 
 <p align="left">
-  <a href="README.md">English</a> · <strong>简体中文</strong> · <a href="README_ZH_HANT.md">繁體中文</a> · <a href="README_JA.md">日本語</a>
+  <a href="README.md">世界时序</a> · <a href="https://github.com/DeanChensj/jiangshan-map/blob/73eea126752b49d65b461db0bb40304fc85a396d/README.md">English</a> · <strong>简体中文</strong> · <a href="README_ZH_HANT.md">繁體中文</a> · <a href="README_JA.md">日本語</a>
 </p>
 
 **一幅可以拖动时间、点城读史、追随古人足迹的中国历史交互舆图（公元前 403 年三家分晋 — 今）**
+
+本仓库包含基于江山时序的世界历史扩展。从中国地图顶部选择「世界历史」即可打开世界地图。世界版提供全球历史疆域、可筛选的大事年表和逐条出处。[运行与数据说明](world/README.md)
 
 [**立即在线把玩 → https://deanchen.me/jiangshan-map/**](https://deanchen.me/jiangshan-map/)
 

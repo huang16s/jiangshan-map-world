@@ -1,7 +1,7 @@
 # 江山時序 · Chronicles of the Realm
 
 <p align="left">
-  <a href="README.md">English</a> · <a href="README_ZH.md">简体中文</a> · <strong>繁體中文</strong> · <a href="README_JA.md">日本語</a>
+  <a href="README.md">世界時序</a> · <a href="https://github.com/DeanChensj/jiangshan-map/blob/73eea126752b49d65b461db0bb40304fc85a396d/README.md">English</a> · <a href="README_ZH.md">简体中文</a> · <strong>繁體中文</strong> · <a href="README_JA.md">日本語</a>
 </p>
 
 **一幅可以拖動時間、點城讀史、追隨古人足跡的中國歷史互動輿圖（西元前 403 年三家分晉 — 今）**

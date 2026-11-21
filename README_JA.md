@@ -1,7 +1,7 @@
 # Chronicles of the Realm · 江山时序
 
 <p align="left">
-  <a href="README.md">English</a> · <a href="README_ZH.md">简体中文 (Chinese)</a> · <a href="README_ZH_HANT.md">繁體中文</a> · <strong>日本語</strong>
+  <a href="README.md">世界時序</a> · <a href="https://github.com/DeanChensj/jiangshan-map/blob/73eea126752b49d65b461db0bb40304fc85a396d/README.md">English</a> · <a href="README_ZH.md">简体中文 (Chinese)</a> · <a href="README_ZH_HANT.md">繁體中文</a> · <strong>日本語</strong>
 </p>
 
 **戦国時代（紀元前 403 年）から現在までの、中国のインタラクティブな歴史地図 — 時間をスクロールし、古都の歴史をたどり、歴史上の人物の足跡を追いかけられます**
