@@ -1,5 +1,7 @@
 # 世界时序 · Jiangshan World Atlas
 
+> **原项目** [江山时序（DeanChensj/jiangshan-map）](https://github.com/DeanChensj/jiangshan-map) · [原版在线地图](https://deanchen.me/jiangshan-map/)
+
 一幅可在中国历史与世界历史之间切换的交互地图。拖动时间轴查看不同年代的政权疆域，点击地点或事件查看沿革、摘要和出处。
 
 [![2024 年世界时序全图，展示全球政权边界、右侧大事年表和下方时间轴](assets/preview_world_2024.webp)](assets/preview_world_2024.webp)
@@ -8,7 +10,7 @@
 
 ## 项目来源与致谢
 
-本仓库由 [huang16s](https://github.com/huang16s) 在 [DeanChensj/jiangshan-map（江山时序）](https://github.com/DeanChensj/jiangshan-map) 的基础上二次开发，起点是上游提交 [`73eea12`](https://github.com/DeanChensj/jiangshan-map/commit/73eea126752b49d65b461db0bb40304fc85a396d)。感谢 DeanChensj 和原项目贡献者开发中国历史地图，整理史料、地图数据和交互功能。原项目的署名、提交历史和许可证随仓库保留。
+世界版由 [huang16s](https://github.com/huang16s) 在上游提交 [`73eea12`](https://github.com/DeanChensj/jiangshan-map/commit/73eea126752b49d65b461db0bb40304fc85a396d) 的基础上二次开发。感谢 DeanChensj 和原项目贡献者开发中国历史地图，整理史料、地图数据和交互功能。原项目的署名、提交历史和许可证随仓库保留。
 
 ## 本版本新增内容
 
