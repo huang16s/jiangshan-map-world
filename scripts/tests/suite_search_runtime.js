@@ -529,7 +529,7 @@ async function runSearchRuntimeSuite(ctx) {
           const openUrl = ctrl._embedOpenUrl();
           assert(openUrl.endsWith('?year=1104&trace=101.778,36.617'), `The "open in atlas" link must carry the view without embed params, got ${openUrl}`);
 
-          for (const readme of ['README.md', 'README_ZH.md']) {
+          for (const readme of ['README_EN.md', 'README_ZH.md']) {
             const text = require('fs').readFileSync(path.join(ROOT, readme), 'utf8');
             assert(text.includes('embed=1') && text.includes('from=1072&to=1126'), `${readme} must document embed mode`);
           }

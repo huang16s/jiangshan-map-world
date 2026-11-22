@@ -31,7 +31,7 @@ cd jiangshan-map-world
 python -m http.server 8000 --bind 127.0.0.1
 ```
 
-打开 [中国历史](http://127.0.0.1:8000/) 或 [世界历史](http://127.0.0.1:8000/world/)。项目自带运行所需的地图和年表数据，用静态 HTTP 服务即可预览。使用方式和维护步骤见 [中国版指南](README_ZH.md)与[世界版指南](world/README.md)。
+打开 [中国历史](http://127.0.0.1:8000/) 或 [世界历史](http://127.0.0.1:8000/world/)。项目自带运行所需的地图和年表数据，用静态 HTTP 服务即可预览。使用方式和维护步骤见 [中国版指南](README_ZH.md)、[中国版英文指南](README_EN.md)及[世界版指南](world/README.md)。
 
 ## 数据来源与许可
 

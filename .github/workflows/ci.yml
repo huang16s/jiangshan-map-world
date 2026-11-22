@@ -27,6 +27,9 @@ jobs:
       - name: Verify polygon bundles are canonical encodings
         run: node scripts/build_atlas.js --check
 
+      - name: Verify the generated world atlas page
+        run: python3 scripts/build_world_shell.py --check
+
       - name: Check polity border topology against baseline
         run: node scripts/audit_topology.js --check
 

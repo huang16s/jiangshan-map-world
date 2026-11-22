@@ -25,6 +25,7 @@ async function runApiSearchSuite(ctx) {
     llmsSrc,
     skillPyPath,
     readmeSrc,
+    readmeEnSrc,
     readmeZhSrc,
     contributingSrc,
     contributingZhSrc,
@@ -844,18 +845,22 @@ async function runApiSearchSuite(ctx) {
     `Expected English monarch search "Taizong of Tang" to resolve to 627 CE, got ${JSON.stringify(enTaizong[0])}`
   );
 
-  // Verify index.html, README.md, and llms.txt metadata sync and removal of unused diag-hatch pattern
+  // Verify the guides, index.html and llms.txt stay in sync with the atlas.
   assert(!htmlSrc.includes('id="diag-hatch"'), 'index.html must not contain unused #diag-hatch pattern');
+  for (const guide of ['README_EN.md', 'README_ZH.md', 'world/README.md']) {
+    assert(readmeSrc.includes(`](${guide})`), `README.md must link to ${guide}`);
+  }
   assert(
     !readmeZhSrc.includes('点右上角的 **「开始挑战」**') &&
       !readmeZhSrc.includes('青史行迹 ▾') &&
       readmeZhSrc.includes('点人溯事') &&
       readmeZhSrc.includes('舆图寻址 · 古地名小试') &&
       readmeZhSrc.includes('href="README.md"') &&
-      !readmeSrc.includes('Journeys ▾') &&
-      readmeSrc.includes('Person Chronicles') &&
-      readmeSrc.includes('Map Pinpoint · Ancient Place Quiz') &&
-      readmeSrc.includes('href="README_ZH.md"') &&
+      readmeZhSrc.includes('href="README_EN.md"') &&
+      !readmeEnSrc.includes('Journeys ▾') &&
+      readmeEnSrc.includes('Person Chronicles') &&
+      readmeEnSrc.includes('Map Pinpoint · Ancient Place Quiz') &&
+      readmeEnSrc.includes('href="README_ZH.md"') &&
       contributingSrc.includes('href="CONTRIBUTING_ZH.md"') &&
       contributingSrc.includes('lore_core.js') &&
       contributingSrc.includes('lore_detail.js') &&
@@ -863,10 +868,11 @@ async function runApiSearchSuite(ctx) {
       contributingZhSrc.includes('lore_core.js') &&
       contributingZhSrc.includes('lore_detail.js') &&
       !readmeSrc.includes('&event=') &&
+      !readmeEnSrc.includes('&event=') &&
       !readmeZhSrc.includes('&event=') &&
       appCode.includes("q.has('event')") &&
       !/\b\d{3}\s*(幅|座|处|条|桩|段)/.test(readmeZhSrc),
-    'README.md, README_ZH.md, CONTRIBUTING.md, CONTRIBUTING_ZH.md, and app.js must cross-link between English and Chinese docs, reference lore_core.js & lore_detail.js, document unified Person Chronicles & search-box Quiz entry point, avoid redundant &event= query params, and avoid hardcoded 3-digit entity counts'
+    'The China atlas guides must cross-link between English and Chinese, document Person Chronicles and the search-box Quiz, and avoid obsolete links or counts. The contribution guides must cross-link and describe both lore bundles.'
   );
   for (const d of dynasties) {
     assert(
@@ -1836,7 +1842,7 @@ async function runApiSearchSuite(ctx) {
       return [...new Set(ctrl._matchPrefectureNames(query, titles).map((i) => titles[i]))];
     };
     for (const [year, query, want] of [
-      [1415, 'Yingtian Prefecture', ['应天府']], // README.md, README_JA.md
+      [1415, 'Yingtian Prefecture', ['应天府']], // README_EN.md, README_JA.md
       [1415, 'Yingtian Fu', ['应天府']], // llms.txt; as displayed in the English UI
       [1415, 'Yingtian', ['应天府']],
       [1415, 'Yingtian Pref.', ['应天府']],
@@ -1860,7 +1866,7 @@ async function runApiSearchSuite(ctx) {
     }
 
     let readmeHoverLinks = 0;
-    for (const file of ['README.md', 'README_ZH.md', 'README_JA.md', 'README_ZH_HANT.md']) {
+    for (const file of ['README.md', 'README_EN.md', 'README_ZH.md', 'README_JA.md', 'README_ZH_HANT.md']) {
       const src = fs.readFileSync(path.join(ROOT, file), 'utf8');
       for (const m of src.matchAll(/\?year=(-?\d+)[^)\s"]*?[&?]hover=([^&)\s"]+)/g)) {
         readmeHoverLinks++;

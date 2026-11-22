@@ -1,16 +1,6 @@
 name: Deploy GitHub Pages
 
 on:
-  push:
-    branches: [main]
-    paths-ignore:
-      - '**.md'
-      - 'docs/**'
-      - 'scripts/**'
-      - 'skills/**'
-      - 'workers/**'
-      - 'data/**'
-      - '.github/ISSUE_TEMPLATE/**'
   workflow_dispatch:
 
 permissions:

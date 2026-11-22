@@ -21,7 +21,7 @@ async function runTraceGenealogySuite(ctx) {
     indexHtml,
     styleCss,
     appCode,
-    readmeSrc,
+    readmeEnSrc,
     readmeZhSrc,
     mingPol,
     pointInShape,
@@ -1258,7 +1258,7 @@ async function runTraceGenealogySuite(ctx) {
     ['assets/preview_journey_sushi_en.webp', 'assets/preview_journey_sushi.webp'],
     ['assets/preview_quiz_challenge_en.webp', 'assets/preview_quiz_challenge.webp'],
   ]) {
-    assert(readmeSrc.includes(enAsset), `README.md must reference English preview ${enAsset}`);
+    assert(readmeEnSrc.includes(enAsset), `README_EN.md must reference English preview ${enAsset}`);
     assert(readmeZhSrc.includes(zhAsset), `README_ZH.md must reference Chinese preview ${zhAsset}`);
     assert(fs.existsSync(path.join(ROOT, enAsset)), `Missing preview asset file ${enAsset}`);
     assert(fs.existsSync(path.join(ROOT, zhAsset)), `Missing preview asset file ${zhAsset}`);
